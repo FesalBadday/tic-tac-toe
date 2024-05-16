@@ -1,0 +1,105 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.container {
+  text-align: center;
+  padding: 30px;
+  background-color: #2b2b2b;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 10px;
+  margin: 20px auto;
+  max-width: 320px;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #ffffff;
+  font-size: 2.5em;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #404040;
+  transition: background-color 0.3s ease;
+}
+
+/* Customize color for X */
+.cell.x {
+  color: #ff0000;
+}
+
+/* Customize color for O */
+.cell.o {
+  color: #ffa500;
+}
+
+.cell:hover {
+  background-color: #505050;
+}
+
+.winner, .winner:hover {
+  background-color: #4caf50;
+  /* Green */
+  color: #ffffff;
+  border-color: #4caf50;
+}
+
+.mode-selection, .difficulty-selection {
+  margin-bottom: 20px;
+}
+
+select {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background-color: #404040;
+  color: #ffffff;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+select:focus {
+  border-color: #4caf50;
+  /* Green */
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  /* Green */
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+  /* Darker green */
+}
